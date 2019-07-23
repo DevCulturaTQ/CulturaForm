@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/generic/reset.css">
+    <link rel="stylesheet" href="css/components/maincomponents.css">
+    <link rel="stylesheet" href="css/bases/bases.css">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-menu">
+
+        </nav>
+    </header>
+    <main>
+        <section class="container-form">
+            <div class="info">
+                <h1 class="title">Cadastro de Artistas</h1>
+                <p class="subtitle">Taquaritinga-SP</p>
+                    <img src="img/logotq.png" alt="logo da prefeitura de Taquaritinga-SP" class="logopref"> 
+                    <img src="img/cultp.png" alt="logo da prefeitura de Taquaritinga-SP" class="logocult">
+            </div>
+            <form class="artista-container" action="/validacadastro" method="POST">
+                <section class="artista-form">
+                    <div class="form-dados">
+                        <label><span id="vnome" class="indicador"></span> Nome Completo: </label>
+                        <input type="text" name="nome" id="nome" required="true">
+                    </div>
+                    <div class="form-dados">
+                        <label>Nome Artistico: </label>
+                        <input type="text" name="nome_artistico" id="nomeartistico">
+                    </div>
+                    <div class="form-dados">
+                        <label>Nome do grupo: </label>
+                        <input type="text" name="nomegrupo" id="nomegrupo">
+                    </div>
+                    <div class="form-dados">
+                        <label><span id="vdata" class="indicador"></span> Data de Nascimento: </label>
+                        <input type="text" class="placeinfo" name="data_nasc" id="nascimento" required="true" placeholder="99/99/9999">
+                    </div>
+                    <div class="form-dados">
+                        <label>Aréa atuante: </label>
+                        <select name="areadeatuacao" id="atua" required="true">
+                            <option value="Artes Visuais">Artes Visuais</option>
+                            <option value="Cine/Foto/Video">Cine/Foto/Video</option>
+                            <option value="Literatura">Literatura</option>
+                            <option value="Música">Música</option>
+                            <option value="Dança">Dança</option>
+                            <option value="Capoeira">Capoeira</option>
+                            <option value="Teatro">Teatro</option>
+                            <option value="Artesanato">Artesanato</option>
+                            <option value="Cultura popular urbana">Cultura popular urbana</option>
+                            <option value="Gestor/Produtor cultura">Gestor/Produtor cultura</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="form-dados">
+                        <label>Identidade de Gênero: </label>
+                        <input type="text" name="genero" id="genero">
+                    </div>
+                    <div class="form-dados">
+                        <label><span id="vcpf" class="indicador"></span> CPF: </label>
+                        <input class="placeinfo" id="cpf" type="text" name="cpf" required="true" placeholder="999.999.999-99">
+                    </div>
+                    <div class="form-dados">
+                        <label for=""><span id="vend" class="indicador"></span> Endereço: </label>
+                    </div>
+                    <div class="form-dados">
+                        <input class="placeinfo" type="text" name="endereco" id="end" required="true" placeholder="Logradouro">
+                    </div>
+                    <div class="form-dados">
+                        <input class="placeinfo" type="text" name="endereco_numero" id="endN" required="true" placeholder="Número" maxlength="5">
+                    </div>
+                    <div class="form-dados">
+                        <input class="placeinfo" type="text" name="endereco_numero" id="endB" required="true" placeholder="Bairro">
+                    </div>
+                    <div class="form-dados">
+                        <label>Telefone: </label>
+                        <input class="placeinfo" type="tel" name="telefone" id="telefone" placeholder="(99) 99999-9999">
+                    </div>
+                    <div class="form-dados">
+                        <label>E-mail: </label>
+                        <input type="email" name="email" id="mail">
+                    </div>
+                    <div class="form-dados">
+                        <label>Status da atividade: </label>
+                        <select name="statusatividade" id="stateatividade">
+                            <option value="Principal">Principal</option>
+                            <option value="Principal">Secundária</option>
+                            <option value="Principal">Sazonal</option>
+                        </select>
+                    </div>
+                    <div class="form-dados">
+                        <label>Grau de Instrução: </label>
+                        <select name="graudeinstrucao" id="ginstrucao">
+                            <option value="Superior">Superior</option>
+                            <option value="Superior">Médio</option>
+                            <option value="Superior">Fundamental</option>
+                            <option value="Superior">Nenhum</option>
+                        </select>
+                    </div>
+                    <div class="form-dados">
+                        <label>Etnia: </label>
+                        <input type="text" name="etnia" id="etnia">
+                    </div>
+                    <div class="form-dados">
+                        <label for="">CNPJ: </label>
+                        <input class="placeinfo" type="text" name="cnpj" id="cnpj" placeholder="99.999.999/9999-99">
+                    </div>
+                    <div class="form-dados">
+                        <label for="">Link para áudio/vídeo demonstrativo (1): </label>
+                        <input type="text" name="tlink" id="tlink1">
+                    </div>
+                    <div class="form-dados">
+                        <label for="">Link para áudio/vídeo demonstrativo (2): </label>
+                        <input type="text" name="tlink" id="tlink2">
+                    </div>
+                </section>
+                <div class="msg-container">
+                    <label>Considerações Gerais:</label>
+                    <textarea class="msg" name="consideracoes" id=""></textarea>
+                </div>
+                <div class="info">
+                    <button class="enviar" type="submit">Enviar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        Desenvolvido por : Ariel Betti
+    </footer>
+
+    <script src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
